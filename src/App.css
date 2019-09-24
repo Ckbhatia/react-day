@@ -1,22 +1,266 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, m/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* // ================================ */
+/* // General style */
+/* // ================================ */
+
+/* // Root Element */
+html {
+  font-size: 16px;
+  /* font-family: $font-family; */
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+/* // Align items */
+.text-center {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0.8rem;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive image */
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* max-width: 100%; */
+  /* height: auto; */
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Center Elemets within its parent */
+.center-child {
+  display: grid;
+  place-items: center;
+}
+
+/* // Bacground colors for sections */
+/* .bg-primary {
+  background: $secondary_background;
+} */
+
+/* // cleafix, cotaining floats */
+.clearfix:after,
+.clearfix::before {
+  *zoom: 1;
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.img-container {
+  border: 5px solid rgb(255, 255, 255);
+  height: 400px;
+  width: 600px;
+}
+
+body {
+  font-size: 16px;
+  color: rgb(158, 157, 157);
+}
+
+
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 4rem auto;
+}
+
+.main-card-container {
+  box-shadow: 4px 4px 6px 12px rgb(224, 224, 224);
+}
+
+.icon {
+  font-size: 1.4rem;
+  margin: 0.5rem 1rem;
+}
+
+/* Header */
+
+.main-header-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.lang-option-container {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.active {
+  background-color: rgb(93, 93, 93);
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.lang {
+  /* color: rgb(93, 93, 93); */
+  border: 2px solid rgb(93, 93, 93);
+  border-radius: 100%;
+  padding: 0.8rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.close-option {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Main */
+.main-section {
+  margin: 0 2rem;
+}
+
+.card-heading {
+  font-size: 2.2rem;
+  margin: 1rem 2rem;
+}
+
+.middle-part {
+  display: flex;
+}
+
+.card-text {
+  margin: 1rem 2rem;
+}
+
+.card-image {
+  width: 250px;
+  height: 190px;
+}
+
+.social-icon-container {
+  margin: 0 1rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem;
+}
+
+.contact {
+  margin: 0.5rem;
+}
+
+/* //  Media queries */
+@media all and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
 }
